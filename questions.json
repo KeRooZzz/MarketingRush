@@ -1,38 +1,38 @@
 [
-   {
-     "id": 1,
-     "question": "Quel est le plus grand océan du monde ?",
-     "answers": ["Océan Atlantique", "Océan Pacifique", "Océan Arctique", "Océan Indien"],
-     "correct": 1
-   },
-   {
-     "id": 2,
-     "question": "Quelle est la capitale du Japon ?",
-     "answers": ["Kyoto", "Séoul", "Tokyo", "Osaka"],
-     "correct": 2
-   },
-   {
-     "id": 3,
-     "question": "Combien font 9 x 7 ?",
-     "answers": ["56", "63", "72", "69"],
-     "correct": 1
-   },
-   {
-     "id": 4,
-     "question": "Quelle planète est la plus proche du Soleil ?",
-     "answers": ["Vénus", "Terre", "Mercure", "Mars"],
-     "correct": 2
-   },
-   {
-     "id": 5,
-     "question": "Quel langage est principalement utilisé pour le web côté client ?",
-     "answers": ["Python", "JavaScript", "C++", "Ruby"],
-     "correct": 1
-   },
-   {
-     "id": 6,
-     "question": "Combien de minutes dans une heure ?",
-     "answers": ["30", "60", "90", "120"],
-     "correct": 1
-   }
+   { "id":1, "question":"What does SEO mean?", "answers":["Social Email Outreach","Site Evaluation Overview","Search Engine Optimization","Sales Engagement Option"], "correct":2 },
+   { "id":2, "question":"What does PPC mean?", "answers":["Public Product Control","Pay Per Click","Paid Promotion Campaign","Performance Per Content"], "correct":1 },
+   { "id":3, "question":"What is long-form content?", "answers":["A short Instagram caption","A TikTok video","A blog post with more than 1,000 words","A tweet"], "correct":2 },
+   { "id":4, "question":"What does SERP refer to?", "answers":["Social Engagement Review Process","Standard Email Response Panel","Search Engine Results Page","Streamlined Editorial Response Plan"], "correct":2 },
+   { "id":5, "question":"What is a podcast?", "answers":["A slideshow presentation","A digital audio program","A printed magazine","A long YouTube commercial"], "correct":1 },
+   { "id":6, "question":"What does USP mean?", "answers":["Universal Social Post","Unique Selling Proposition","Updated Strategy Plan","User Search Preference"], "correct":1 },
+   { "id":7, "question":"What is short-form content?", "answers":["A long tutorial","A TikTok or Reel","A podcast episode","A 20-page report"], "correct":1 },
+   { "id":8, "question":"What is a content calendar used for?", "answers":["To post only on weekends","To create logos","To plan and schedule content","To design paid ads"], "correct":2 },
+   { "id":9, "question":"What does 'engagement' measure?", "answers":["Reactions like likes, shares, and comments","Money spent on PPC ads","The number of ads a company buys","The speed of a website"], "correct":0 },
+   { "id":10, "question":"What is a headline?", "answers":["The footer of a website","A type of podcast","The title of an article or content piece","The background color of a post"], "correct":2 },
+   { "id":11, "question":"What is A/B testing used for?", "answers":["Fixing spelling mistakes","Comparing two versions of content to see which works best","Checking SEO penalties","Choosing the fastest internet provider"], "correct":1 },
+   { "id":12, "question":"What does 'brand awareness' mean?", "answers":["How familiar people are with the brand","How many employees a brand has","How much a brand spends on ads","How fast a website loads"], "correct":0 },
+   { "id":13, "question":"What is evergreen content?", "answers":["Content made only for TikTok","Content that stays relevant for a long time","Content only posted in December","Content written in green color"], "correct":1 },
+   { "id":14, "question":"What is a distribution channel?", "answers":["A TV remote","A website loading error","A platform where content is shared","A brand slogan"], "correct":2 },
+   { "id":15, "question":"What does 'reach' represent?", "answers":["The number of people who saw your content","The number of products sold","The cost of a PPC campaign","How many emails you send per day"], "correct":0 },
+   { "id":16, "question":"What is a 'white paper'?", "answers":["A podcast script","A long, detailed report explaining a topic","A short social media post","A type of newspaper"], "correct":1 },
+   { "id":17, "question":"What is native advertising?", "answers":["Ads that appear only in emails","Ads only visible on TV","Ads designed to blend naturally into the platform","Fake ads used for testing"], "correct":2 },
+   { "id":18, "question":"What does 'posting cadence' refer to?", "answers":["How often you publish content","The brightness of an Instagram post","The price of a PPC ad","The length of your headline"], "correct":0 },
+   { "id":19, "question":"What is a 'content backlog'?", "answers":["A website crash","A list of ideas for future content","A failed PPC campaign","A list of deleted posts"], "correct":1 },
+   { "id":20, "question":"Which action can help an entrepreneur attract more clients?", "answers":["Stop posting for a month","Reply quickly to messages","Ignore comments","Post at 3 a.m."], "correct":1 },
+   { "id":21, "question":"Which strategy is the least expensive?", "answers":["PPC (paid advertising)","SEO","TV ads","Street posters"], "correct":3 },
+   { "id":22, "question":"What helps an entrepreneur stand out?", "answers":["Copy competitors","A clear USP","Post once a year","Reduce product quality"], "correct":1 },
+   { "id":23, "question":"Which type of content often increases engagement?", "answers":["Short-form content","White paper","Product page","Long email"], "correct":0 },
+   { "id":24, "question":"Which action improves visibility on Google?", "answers":["SEO","Editing a podcast","Changing the logo","Posting a meme"], "correct":0 },
+   { "id":25, "question":"Which tool helps avoid delays?", "answers":["Scheduling tools","Calculator","Maps","Spotify"], "correct":0 },
+   { "id":26, "question":"What should an entrepreneur do before choosing a strategy?", "answers":["Guess","Analyse their audience","Post randomly","Copy an influencer"], "correct":1 },
+   { "id":27, "question":"How can an entrepreneur avoid losing an important client?", "answers":["Never answer the client","Provide a good experience","Increase prices without warning","Post less"], "correct":1 },
+   { "id":28, "question":"What is the impact of a slow website?", "answers":["More sales","Fewer conversions","More followers","Higher reach"], "correct":1 },
+   { "id":29, "question":"Which tool helps avoid running out of content ideas?", "answers":["Content backlog","School planner","Empty document","Random sheet of paper"], "correct":0 },
+   { "id":30, "question":"What is the purpose of an editorial line?", "answers":["Choose the weather","Define what you talk about and how","Learn coding","Increase prices"], "correct":1 },
+   { "id":31, "question":"Which element must be clear in communication?", "answers":["USP","Long-form content","Background color","Logo size"], "correct":0 },
+   { "id":32, "question":"What helps publish at the right time?", "answers":["Posting cadence","A stopwatch","A wallpaper","An Instagram filter"], "correct":0 },
+   { "id":33, "question":"How should an entrepreneur choose the right distribution channel?", "answers":["Randomly","Based on the audience","Based on the logo color","Based on the weather"], "correct":1 },
+   { "id":34, "question":"What is the role of positioning?", "answers":["Choose music","Place the brand in the customer’s mind","Set the exact price","Decorate the website"], "correct":1 },
+   { "id":35, "question":"Which tool helps measure an ad’s performance?", "answers":["A/B testing","An alarm clock","A basic calculator","A playlist"], "correct":0 },
+   { "id":36, "question":"Which action helps reduce workload?", "answers":["Streamline","Do everything at the same time","Stop sleeping","Ignore tasks"], "correct":0 }
 ]
