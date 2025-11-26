@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Questions App</title>
-   <link rel="stylesheet" href="style.css" />
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>QCM App</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
    <div class="container">
-      <h1>Retrouver une question</h1>
+      <h1>Questionnaire</h1>
 
-      <input 
-         type="number" 
-         id="inputNumber"
-         placeholder="Numéro de la carte"
-      />
+      <input id="inputNumber" type="number" placeholder="Numéro de la question">
+      <button id="searchButton">Afficher</button>
 
-      <button id="searchButton">Afficher la question</button>
+      <h2 id="questionText"></h2>
 
-      <p id="outputQuestion"></p>
+      <div id="answersContainer"></div>
+
+      <p id="feedback"></p>
+
+      <!-- 🔥 Score + message de victoire -->
+      <div id="scoreContainer">
+         <p id="scoreDisplay"></p>
+         <p id="winMessage"></p>
+      </div>
+
+      <!-- Canvas confettis -->
+      <canvas id="confettiCanvas"></canvas>
    </div>
 
    <script src="app.js"></script>

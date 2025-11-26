@@ -1,36 +1,130 @@
+/* === BODY + CONTAINER === */
 body {
    font-family: sans-serif;
-   background: #f2f2f2;
+   background: #1e1e2f; /* Dark mode fixe */
+   color: #eee;
    display: flex;
    justify-content: center;
+   padding: 20px;
 }
 
 .container {
-   margin-top: 80px;
-   background: white;
+   margin-top: 40px;
+   background: #2c2c3e;
    padding: 25px;
-   border-radius: 10px;
-   width: 90%;
+   border-radius: 12px;
+   width: 95%;
    max-width: 400px;
    text-align: center;
-   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
+/* === INPUT + BUTTONS === */
 input {
-   width: 100%;
+   width: 95%;
    padding: 10px;
    border-radius: 8px;
-   border: 1px solid #ccc;
+   border: 1px solid #555;
    margin-bottom: 10px;
+   background: #1e1e2f;
+   color: #eee;
 }
 
-   button {
+button {
    width: 100%;
    padding: 10px;
    border-radius: 8px;
    border: none;
-   background: #50b886;
+   background: #4a63ff;
    color: white;
    font-weight: bold;
    cursor: pointer;
+   margin-bottom: 10px;
+}
+
+button:hover {
+   background: #3a4bd1;
+}
+
+.answer-btn {
+   display: block;
+   width: 100%;
+   margin: 8px 0;
+   padding: 12px;
+   background: #3b3b55;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: 0.2s;
+   color: #eee;
+}
+
+.answer-btn:hover {
+   background: #4a4a70;
+}
+
+.correct {
+   background: #50b886 !important;
+   color: white;
+   animation: correctPulse 0.4s ease;
+}
+
+@keyframes correctPulse {
+   0% { transform: scale(1); }
+   50% { transform: scale(1.08); }
+   100% { transform: scale(1); }
+}
+
+.wrong {
+   background: #de494e !important;
+   color: white;
+   animation: wrongShake 0.3s ease;
+}
+
+@keyframes wrongShake {
+   0% { transform: translateX(0); }
+   25% { transform: translateX(-6px); }
+   50% { transform: translateX(6px); }
+   75% { transform: translateX(-6px); }
+   100% { transform: translateX(0); }
+}
+
+/* === SCORE === */
+#scoreContainer {
+   margin-top: 20px;
+   padding: 15px;
+   background: #38384f;
+   border-radius: 10px;
+   box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+#winMessage {
+   margin-top: 10px;
+   font-weight: bold;
+   color: #50b886;
+   font-size: 18px;
+}
+
+/* === CONFETTI === */
+#confettiCanvas {
+   position: fixed;
+   pointer-events: none;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 9999;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 480px) {
+   .container {
+      width: 100%;
+      padding: 20px;
+   }
+
+   input, button, .answer-btn {
+      font-size: 16px;
+      padding: 10px;
+   }
 }

@@ -1,22 +1,38 @@
 [
-   { "id": 1, "question": "Quel est ton plus grand rêve ?" },
-   { "id": 2, "question": "Quelle est la chose la plus courageuse que tu aies faite ?" },
-   { "id": 3, "question": "Si tu pouvais dîner avec n'importe quelle personne, morte ou vivante, qui choisirais-tu ?" },
-   { "id": 4, "question": "Quel est le voyage que tu rêves de faire ?" },
-   { "id": 5, "question": "Quelle est ta plus grande fierté ?" },
-   { "id": 6, "question": "Quel est ton meilleur souvenir d’enfance ?" },
-   { "id": 7, "question": "Quelle compétence aimerais-tu absolument apprendre ?" },
-   { "id": 8, "question": "Quel film t’a le plus marqué ?" },
-   { "id": 9, "question": "Si tu pouvais changer un événement de ta vie, ce serait lequel ?" },
-   { "id": 10, "question": "Quelle est la qualité que tu apprécies le plus chez les autres ?" },
-   { "id": 11, "question": "Quel est ton plat préféré ?" },
-   { "id": 12, "question": "Si tu pouvais vivre dans n'importe quelle époque, laquelle choisirais-tu ?" },
-   { "id": 13, "question": "Quel est ton plus grand défaut ?" },
-   { "id": 14, "question": "Quelle est la chose qui te fait rire à coup sûr ?" },
-   { "id": 15, "question": "Quel est ton objectif principal pour l'année à venir ?" },
-   { "id": 16, "question": "Quel livre t’a le plus influencé ?" },
-   { "id": 17, "question": "Quelle musique te met automatiquement de bonne humeur ?" },
-   { "id": 18, "question": "Quelle personne t’a le plus inspiré dans ta vie ?" },
-   { "id": 19, "question": "Quelle est une habitude que tu voudrais changer ?" },
-   { "id": 20, "question": "Quelle est la meilleure décision que tu aies prise ?" }
+   {
+     "id": 1,
+     "question": "Quel est le plus grand océan du monde ?",
+     "answers": ["Océan Atlantique", "Océan Pacifique", "Océan Arctique", "Océan Indien"],
+     "correct": 1
+   },
+   {
+     "id": 2,
+     "question": "Quelle est la capitale du Japon ?",
+     "answers": ["Kyoto", "Séoul", "Tokyo", "Osaka"],
+     "correct": 2
+   },
+   {
+     "id": 3,
+     "question": "Combien font 9 x 7 ?",
+     "answers": ["56", "63", "72", "69"],
+     "correct": 1
+   },
+   {
+     "id": 4,
+     "question": "Quelle planète est la plus proche du Soleil ?",
+     "answers": ["Vénus", "Terre", "Mercure", "Mars"],
+     "correct": 2
+   },
+   {
+     "id": 5,
+     "question": "Quel langage est principalement utilisé pour le web côté client ?",
+     "answers": ["Python", "JavaScript", "C++", "Ruby"],
+     "correct": 1
+   },
+   {
+     "id": 6,
+     "question": "Combien de minutes dans une heure ?",
+     "answers": ["30", "60", "90", "120"],
+     "correct": 1
+   }
 ]
