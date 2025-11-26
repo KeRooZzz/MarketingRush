@@ -48,7 +48,7 @@ document.getElementById("searchButton").addEventListener("click", () => {
          if (index === question.correct) {
             btn.classList.add("correct");
             feedback.textContent = "✔️ Bonne réponse !";
-            feedback.style.color = "#50b886";
+            feedback.style.color = "#8EF757";
 
             answeredQuestions.add(question.id);
             incrementScore();
