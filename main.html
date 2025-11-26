@@ -5,33 +5,95 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Dé</title>
 <style>
-   html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial}
-   body{display:flex;align-items:center;justify-content:center;background:#0f172a;color:#e6eef8}
-   .card{width:320px;height:320px;border-radius:20px;background:linear-gradient(145deg,#0b1220,#132033);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(2,6,23,.6);user-select:none}
-   .dot-grid{width:220px;height:220px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:18px}
-   .dot{width:36px;height:36px;border-radius:50%;background:#e6eef8;opacity:.15;transform:scale(.9);transition:all .25s ease}
-   .dot.on{opacity:1;transform:scale(1)}
-   .controls{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
-   button{background:#e6eef8;color:#071028;border:0;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
-   .roll{font-size:22px;font-weight:700;letter-spacing:1px}
-   .big-num{position:absolute;top:12px;left:12px;font-size:18px;opacity:.12}
+   html,body{
+      height:100%;
+      margin:0;
+      font-family:system-ui,Segoe UI,Roboto,Arial;
+      background:#0b0f19; /* Fond plus sombre */
+      color:#e6eef8;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:25px;
+   }
+
+   .card{
+      width:320px;
+      height:320px;
+      border-radius:24px;
+      background:linear-gradient(145deg,#1c2942,#233552); /* Dé plus clair */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 12px 35px rgba(0,0,0,0.55);
+      user-select:none;
+      position:relative;
+   }
+
+   .dot-grid{
+      width:220px;
+      height:220px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      grid-template-rows:repeat(3,1fr);
+      gap:18px;
+   }
+
+   .dot{
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      background:#ffffff;
+      opacity:.15;
+      transform:scale(.9);
+      transition:all .25s ease;
+   }
+   .dot.on{
+      opacity:1;
+      transform:scale(1);
+   }
+
+   #last{
+      position:absolute;
+      top:14px;
+      left:14px;
+      font-size:20px;
+      font-weight:700;
+      opacity:.18;
+   }
+
+   .btn{
+      background:#e6eef8;
+      color:#0a1424;
+      border:0;
+      padding:14px 20px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:20px; /* Plus grand */
+      cursor:pointer;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
+      transition:transform .15s ease, box-shadow .15s ease;
+   }
+   .btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 6px 18px rgba(0,0,0,0.35);
+   }
 </style>
 </head>
+
 <body>
+
    <div class="card" role="application" aria-label="Dé virtuel" tabindex="0">
-      <div class="big-num" id="last">—</div>
+      <div id="last">—</div>
       <div class="dot-grid" id="grid" aria-hidden="true">
-         <!-- 9 emplacements, indexés 0..8 -->
          <div class="dot" data-i="0"></div><div class="dot" data-i="1"></div><div class="dot" data-i="2"></div>
          <div class="dot" data-i="3"></div><div class="dot" data-i="4"></div><div class="dot" data-i="5"></div>
          <div class="dot" data-i="6"></div><div class="dot" data-i="7"></div><div class="dot" data-i="8"></div>
       </div>
    </div>
 
-   <div class="controls" role="region" aria-label="Contrôles">
-      <button id="rollBtn" class="roll">Lancer 🎲</button>
-      <button id="shareBtn">Partager</button>
-   </div>
+   <button id="rollBtn" class="btn">🎲 Lancer</button>
 
 <script>
 const patterns = {
@@ -42,48 +104,44 @@ const patterns = {
    5: [0,2,4,6,8],
    6: [0,2,3,5,6,8]
 };
+
 const dots = Array.from(document.querySelectorAll('.dot'));
 const lastEl = document.getElementById('last');
 const rollBtn = document.getElementById('rollBtn');
-const shareBtn = document.getElementById('shareBtn');
 
 function setPattern(n){
    dots.forEach(d=>d.classList.remove('on'));
-   (patterns[n]||[]).forEach(i=>{
-      const el = dots.find(x=>x.dataset.i==i);
-      if(el) el.classList.add('on');
+   (patterns[n] || []).forEach(i => {
+      dots.find(x=>x.dataset.i==i).classList.add('on');
    });
    lastEl.textContent = n;
 }
 
 function rollOnce(){
-  // petite animation
    rollBtn.disabled = true;
    let steps = 12;
    const interval = setInterval(()=>{
       const r = Math.floor(Math.random()*6)+1;
       setPattern(r);
       steps--;
-      if(steps<=0){ clearInterval(interval); rollBtn.disabled = false; }
+      if(steps<=0){
+      clearInterval(interval);
+      rollBtn.disabled = false;
+      }
    }, 80);
 }
 
 rollBtn.addEventListener('click', rollOnce);
-document.body.addEventListener('keydown', e=>{ if(e.code==='Space') { e.preventDefault(); rollOnce(); }});
+document.body.addEventListener('keydown', e=>{
+   if(e.code==="Space"){
+      e.preventDefault();
+      rollOnce();
+   }
+});
 document.querySelector('.card').addEventListener('dblclick', rollOnce);
 
-// partage / copier le lien
-shareBtn.addEventListener('click', async ()=>{
-   try{
-      const url = location.href;
-      if(navigator.share){ await navigator.share({title:'Dé en ligne',text:'Lancer le dé',url}); return; }
-      await navigator.clipboard.writeText(url);
-      alert('Lien copié dans le presse-papier — génère un QR à partir de ce lien.');
-   }catch(e){ alert('Impossible de partager : ' + e.message); }
-});
-
-// au chargement, affiche un 1
 setPattern(1);
 </script>
+
 </body>
 </html>

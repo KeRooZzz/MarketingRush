@@ -1,0 +1,36 @@
+body {
+   font-family: sans-serif;
+   background: #f2f2f2;
+   display: flex;
+   justify-content: center;
+}
+
+.container {
+   margin-top: 80px;
+   background: white;
+   padding: 25px;
+   border-radius: 10px;
+   width: 90%;
+   max-width: 400px;
+   text-align: center;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+   width: 100%;
+   padding: 10px;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   margin-bottom: 10px;
+}
+
+   button {
+   width: 100%;
+   padding: 10px;
+   border-radius: 8px;
+   border: none;
+   background: #50b886;
+   color: white;
+   font-weight: bold;
+   cursor: pointer;
+}
